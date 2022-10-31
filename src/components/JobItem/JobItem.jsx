@@ -12,9 +12,13 @@ import {
 } from './JobItem.styled';
 import { Stars } from 'components/Stars/Stars';
 import { formatDistance } from 'date-fns';
+import { useNavigate } from 'react-router';
 export const JobItem = ({ item }) => {
+  const navigate = useNavigate();
   return (
-    <Item>
+    <Item
+      onClick={() => navigate(`/details`, { replace: true, state: { item } })}
+    >
       <Image src="https://via.placeholder.com/300/09f/fff.png" alt="alt" />
       <TextContainer>
         <DataContainer>

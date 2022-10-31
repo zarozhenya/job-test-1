@@ -9,6 +9,11 @@ export const Item = styled.div`
   box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08),
     0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
   padding: 24px 16px;
+  transition: transform 200ms linear;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+  }
 `;
 
 export const Image = styled.img`

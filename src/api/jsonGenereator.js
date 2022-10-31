@@ -11,11 +11,3 @@ export const fetchJobs = async () => {
   const response = await axios.get('');
   return response.data;
 };
-
-// export const fetchCity = async (lat, lon) => {
-//   const response = await fetch(
-//     `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&language=en-EN&sensor=true&key=AIzaSyA8-xuwn10TwDrhLUoJL2bJGK0UmPMYOho`
-//   );
-//   const data = await response.json();
-//   return data;
-// };
