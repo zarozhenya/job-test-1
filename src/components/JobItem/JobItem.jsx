@@ -1,5 +1,4 @@
 import { ImLocation } from 'react-icons/im';
-import { BsBookmark } from 'react-icons/bs';
 import {
   BookmarkPostedContainer,
   DataContainer,
