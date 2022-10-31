@@ -1,0 +1,42 @@
+import { ImLocation } from 'react-icons/im';
+import { BsBookmark } from 'react-icons/bs';
+import {
+  BookmarkPostedContainer,
+  DataContainer,
+  Heading,
+  Image,
+  Item,
+  StarsPostedContainer,
+  StyledBsBookmark,
+  Text,
+  TextContainer,
+} from './JobItem.styled';
+import { Stars } from 'components/Stars/Stars';
+import { formatDistance } from 'date-fns';
+export const JobItem = ({ item }) => {
+  return (
+    <Item>
+      <Image src="https://via.placeholder.com/300/09f/fff.png" alt="alt" />
+      <TextContainer>
+        <DataContainer>
+          <Heading>{item.title}</Heading>
+          <Text>Department name • {item.name}</Text>
+          <Text>
+            <ImLocation />
+            {item.address}
+          </Text>
+        </DataContainer>
+
+        <StarsPostedContainer>
+          <Stars value={5} />
+          <BookmarkPostedContainer>
+            <StyledBsBookmark />
+            <Text>
+              Posted {formatDistance(new Date(item.createdAt), new Date())}
+            </Text>
+          </BookmarkPostedContainer>
+        </StarsPostedContainer>
+      </TextContainer>
+    </Item>
+  );
+};
