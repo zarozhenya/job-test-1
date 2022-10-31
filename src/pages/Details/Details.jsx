@@ -7,9 +7,13 @@ import { Button, Container, Item, List, StyledLink } from './Details.styled';
 import { Options } from 'components/Options/Options';
 import { Gallery } from 'components/Gallery/Gallery';
 import { MapCard } from 'components/MapCard/MapCard';
+import { useEffect } from 'react';
 
 export const Details = () => {
   const { state } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   if (!state) {
     return <Navigate to="/" />;
   }
